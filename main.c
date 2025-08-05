@@ -9,7 +9,7 @@ int verificaDuplicidade(int vec[], int cod, int tam){
 }
 
 void cadastroInicial(int vec[], int quant[], int tam){
-    int cod = 0, qnt = 0, checkDuplicidade = 0;
+    int cod = 0, checkDuplicidade = 0;
     for (int i = 0; i < tam; ++i){
         do{
             printf("Digite o codigo do produto %d \n", i + 1);
@@ -17,16 +17,9 @@ void cadastroInicial(int vec[], int quant[], int tam){
             checkDuplicidade = verificaDuplicidade(vec, cod, tam);
             if (!checkDuplicidade){
                 printf("Codigo duplicado, favor digitar novamente. \n"); 
-            } else {
-                do{
-                    printf("Digite a quantidade a ser adicionada: \n");
-                    scanf("%d", &qnt);
-                    if(qnt < 0) printf("Valor nao pode ser negativo, favor digitar novamente. \n");
-                }while(qnt < 0);
-            }
+            } 
         }while(!checkDuplicidade);
         vec[i] = cod;
-        quant[i] = qnt;
     }
 }
 
@@ -53,7 +46,7 @@ int buscaProduto(int cod, int codigos[], int tam){
 }
 
 int main(){
-    int codigos[5], quantidade[5], opc = 0, indice = -1, cod, tam = 5, quant;
+    int codigos[5], quantidade[5] = {0,0,0,0,0}, opc = 0, indice = -1, cod, tam = 5, quant;
 
     printf("Entre com os dados iniciais \n");
     cadastroInicial(codigos, quantidade, tam);
