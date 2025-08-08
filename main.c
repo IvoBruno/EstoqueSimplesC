@@ -8,7 +8,7 @@ int verificaDuplicidade(int vec[], int cod, int tam){
     return check;
 }
 
-void cadastroInicial(int vec[], int quant[], int tam){
+void cadastroInicial(int vec[], int tam){
     int cod = 0, checkDuplicidade = 0;
     for (int i = 0; i < tam; ++i){
         do{
