@@ -49,7 +49,7 @@ int main(){
     int codigos[5], quantidade[5] = {0,0,0,0,0}, opc = 0, indice = -1, cod, tam = 5, quant;
 
     printf("Entre com os dados iniciais \n");
-    cadastroInicial(codigos, quantidade, tam);
+    cadastroInicial(codigos, tam);
     do{
         printf("Digite a opcao desejada: \n");
         printf("1 - Buscar produto\n");
