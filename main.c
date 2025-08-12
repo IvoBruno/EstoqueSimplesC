@@ -105,5 +105,6 @@ int main(){
             break;
         }
     }while(opc != 5);
+    printf("Programa finalizado");
     return 0;
 }
